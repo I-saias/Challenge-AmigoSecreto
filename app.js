@@ -4,11 +4,16 @@
 let amigosIngresados = [];
 let entrada = 0;
 
+//funciones 
 function agregarAmigo(){
-    entrada = document.querySelector("input").value;
+    entrada = document.querySelector("input").value;// Esto captura el valor de entrada del elemento input
     console.log(entrada);
-
-    
-
-    if 
+  // validamos la entrada de usuario y actualizamos la lista y limpiamos el input
+    if (entrada == ""){
+        alert("Por favor inserta un nombre");
+    } else{
+        amigosIngresados.push(entrada);
+        limpiar = document.querySelector("input").value = "";
+        console.log(amigosIngresados);
+    }    
 }
