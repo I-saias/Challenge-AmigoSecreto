@@ -56,4 +56,3 @@ function ActualizarAmigos (){
     document.getElementById("listaAmigos").innerHTML = ""; // Limpiar la lista en HTML
     document.getElementById("resultado").innerHTML = ""; // Borrar el resultado del sorteo
 }
- sortearAmigo();
