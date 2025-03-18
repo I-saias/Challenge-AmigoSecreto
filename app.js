@@ -1,6 +1,8 @@
 //variables
 let amigosIngresados = [];
-let entrada = 0;
+let entrada;
+let lista;
+let resultado;
 
 //funciones 
 function agregarAmigo(){
@@ -19,6 +21,7 @@ function agregarAmigo(){
 }
 
 function ActualizarAmigos (){
+   
     lista = document.getElementById("listaAmigos") // captura la lista ul del html
     lista.innerHTML = "";// limpia los datos de la  lista actual
 
@@ -27,7 +30,7 @@ function ActualizarAmigos (){
         let amigo = document.createElement("li");// esto crea un elemento li 
         amigo.textContent = amigosIngresados[i];// aqui se agrega el contenido de la variable al elemento li
         lista.appendChild(amigo);//esto agrega el elemento li al elemento ul
-        return
+        
  
     }
     
@@ -47,4 +50,10 @@ function ActualizarAmigos (){
         console.log ("no hay elementos");
     }
  }
+ 
+ function reiniciarSorteo() {
+    amigosIngresados = []; // Vaciar el array
+    document.getElementById("listaAmigos").innerHTML = ""; // Limpiar la lista en HTML
+    document.getElementById("resultado").innerHTML = ""; // Borrar el resultado del sorteo
+}
  sortearAmigo();
